@@ -1,0 +1,44 @@
+functionsDirectory = "/workspace/scratch/3cb9ac63c06e/netlify-workbench/netlify/functions"
+functionsDirectoryOrigin = "config-v1"
+headersOrigin = "config"
+plugins = []
+redirects = []
+
+[build]
+publish = "/workspace/scratch/3cb9ac63c06e/netlify-workbench/public"
+publishOrigin = "config"
+base = "/workspace/scratch/3cb9ac63c06e/netlify-workbench"
+functions = "/workspace/scratch/3cb9ac63c06e/netlify-workbench/netlify/functions"
+
+  [build.environment]
+
+  [build.processing]
+
+    [build.processing.css]
+
+    [build.processing.html]
+
+    [build.processing.images]
+
+    [build.processing.js]
+
+  [build.services]
+
+[database]
+
+  [database.migrations]
+  path = "/workspace/scratch/3cb9ac63c06e/netlify-workbench/netlify/database/migrations"
+
+[functions]
+
+  [functions."*"]
+  node_bundler = "esbuild"
+
+[[headers]]
+for = "/*"
+
+  [headers.values]
+  Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'none'"
+  Referrer-Policy = "strict-origin-when-cross-origin"
+  X-Content-Type-Options = "nosniff"
+  X-Robots-Tag = "noindex, nofollow"
